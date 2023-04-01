@@ -19,8 +19,8 @@ script:
 after_success:
 # Assuming DOCKER_PASSWORD and DOCKER_USERNAME are set in the Travis repository settings
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push empl1/udagram-api-feed:v1
-  - docker push empl1/udagram-api-user:v1
-  - docker push empl1/udagram-frontend:local
-  - docker push empl1/udagram-reverseproxy:v1
+  - docker push emb1605272/udagram-api-feed:v1
+  - docker push emb1605272/udagram-api-user:v1
+  - docker push emb1605272/udagram-frontend:local
+  - docker push emb1605272/udagram-reverseproxy:v1
 
