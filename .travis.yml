@@ -23,4 +23,5 @@ after_success:
   - docker push emb1605272/udagram-api-user:v1
   - docker push emb1605272/udagram-frontend:local
   - docker push emb1605272/udagram-reverseproxy:v1
+  
 
