@@ -1,4 +1,5 @@
-language: node_js
+language: 
+  - node_js
 
 node_js: 
   - 13
@@ -17,7 +18,7 @@ script:
   - docker tag udagram-api-feed emb1605272/udagram-api-feed:v4
   - docker tag udagram-api-user emb1605272/udagram-api-user:v4
   - docker tag udagram-frontend emb1605272/udagram-frontend:v4
-  - docker tag reverseproxy emb1605272/udagram-reverseproxy:v4
+  - docker tag reverseproxy emb1605272/reverseproxy:v4
   
 after_success:
   # Assuming DOCKER_PASSWORD and DOCKER_USERNAME are set in the Travis repository settings
@@ -25,4 +26,4 @@ after_success:
   - docker push emb1605272/udagram-api-feed:v4
   - docker push emb1605272/udagram-api-user:v4
   - docker push emb1605272/udagram-frontend:v4
-  - docker push emb1605272/udagram-reverseproxy:v4
+  - docker push emb1605272/reverseproxy:v4
