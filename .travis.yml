@@ -28,8 +28,8 @@ script:
   
   # Login Docker
   - echo '________LOGIN_______'
-  - docker login -u emb1605272 -p EP3E2Mr&&
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker login -u=emb1605272 -p=EP3E2Mr&&
+  #- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   # Pushing 
   - echo '_____________beginning push image'
   - docker push emb1605272/udagram-api-feed:v4
