@@ -30,7 +30,7 @@ after_success:
   - echo '________LOGIN_______'
   #- docker login -u=emb1605272 -p=EP3E2Mr&&
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - echo 'username, password'  $DOCKER_USERNAME $DOCKER_PASSWORD
+  #- echo 'username, password'  $DOCKER_USERNAME $DOCKER_PASSWORD
   # Pushing 
   - echo '_____________beginning push image'
   - docker push emb1605272/udagram-api-feed:v5
