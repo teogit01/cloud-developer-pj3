@@ -17,10 +17,10 @@ script:
 
   # Tagging
   - echo '_____________beginning tag'
-  - docker tag udagram-api-feed emb1605272/udagram-api-feed:v5
-  - docker tag udagram-api-user emb1605272/udagram-api-user:v5
-  - docker tag udagram-frontend emb1605272/udagram-frontend:v5
-  - docker tag reverseproxy emb1605272/reverseproxy:v5
+  - docker tag udagram-api-feed emb1605272/udagram-api-feed:v6
+  - docker tag udagram-api-user emb1605272/udagram-api-user:v6
+  - docker tag udagram-frontend emb1605272/udagram-frontend:v6
+  - docker tag reverseproxy emb1605272/reverseproxy:v6
 
   - echo 'DOCKER IMAGE LS____'
   - docker image ls
@@ -33,7 +33,7 @@ after_success:
   #- echo 'username, password'  $DOCKER_USERNAME $DOCKER_PASSWORD
   # Pushing 
   - echo '_____________beginning push image'
-  - docker push emb1605272/udagram-api-feed:v5
-  - docker push emb1605272/udagram-api-user:v5
-  - docker push emb1605272/udagram-frontend:v5
-  - docker push emb1605272/reverseproxy:v5
+  - docker push emb1605272/udagram-api-feed:v6
+  - docker push emb1605272/udagram-api-user:v6
+  - docker push emb1605272/udagram-frontend:v6
+  - docker push emb1605272/reverseproxy:v6
