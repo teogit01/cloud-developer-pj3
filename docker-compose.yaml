@@ -1,5 +1,13 @@
 version: "3"
 services:
+  reverseproxy:
+    image: reverseproxy:v6
+    ports:
+        - 8080:8080
+    restart: always
+    depends_on:
+      - api-user
+      - api-feed
   api-user:
     image: udagram-api-user:v6
     environment:
@@ -30,11 +38,3 @@ services:
     image: udagram-frontend:v6
     ports:
       - "8100:80"
-  reverseproxy:
-    image: reverseproxy:v6
-    ports:
-        - 8080:8080
-    restart: always
-    depends_on:
-      - api-user
-      - api-feed
