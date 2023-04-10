@@ -46,3 +46,4 @@ configurations/
 
 # .aws-secret.yaml
 # .env-secret.yaml
+.info.txt
